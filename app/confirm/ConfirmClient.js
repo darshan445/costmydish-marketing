@@ -16,6 +16,7 @@ export function ConfirmClient() {
   const [email, setEmail] = useState('');
   const [resendStatus, setResendStatus] = useState('idle');
   const [resendMessage, setResendMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     let active = true;
@@ -27,14 +28,17 @@ export function ConfirmClient() {
 
         if (!active) return;
 
-        if (session && !error) {
+        if (session) {
           setStatus('success');
           return;
         }
 
+        setErrorMessage(error?.message ?? '');
         setStatus('error');
-      } catch {
-        if (active) setStatus('error');
+      } catch (err) {
+        if (!active) return;
+        setErrorMessage(err?.message ?? 'Could not verify link.');
+        setStatus('error');
       }
     }
 
@@ -101,7 +105,8 @@ export function ConfirmClient() {
       title="Link expired or invalid"
       description="This confirmation link may have expired. Request a new one below."
     >
-      <form className="space-y-4" onSubmit={handleResend}>
+      {errorMessage ? <AuthMessage>{errorMessage}</AuthMessage> : null}
+      <form className={`space-y-4 ${errorMessage ? 'mt-4' : ''}`} onSubmit={handleResend}>
         <AuthField
           id="email"
           label="Email address"

@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { AuthButton, AuthLoading, AuthShell } from '@/components/AuthShell';
+import { AuthButton, AuthLoading, AuthMessage, AuthShell } from '@/components/AuthShell';
 import { APP_DEEP_LINK, establishSessionFromUrl } from '@/lib/auth';
 import { getSupabase } from '@/lib/supabase';
 
 export function ResetPasswordClient() {
   const router = useRouter();
   const [status, setStatus] = useState('loading');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     let active = true;
@@ -20,14 +21,17 @@ export function ResetPasswordClient() {
 
         if (!active) return;
 
-        if (session && !error) {
+        if (session) {
           router.replace('/update-password');
           return;
         }
 
+        setErrorMessage(error?.message ?? '');
         setStatus('error');
-      } catch {
-        if (active) setStatus('error');
+      } catch (err) {
+        if (!active) return;
+        setErrorMessage(err?.message ?? 'Could not verify reset link.');
+        setStatus('error');
       }
     }
 
@@ -51,7 +55,10 @@ export function ResetPasswordClient() {
       title="Link expired"
       description="This password reset link is invalid or has expired. Request a new one from the app."
     >
-      <AuthButton href={APP_DEEP_LINK}>Back to app</AuthButton>
+      {errorMessage ? <AuthMessage>{errorMessage}</AuthMessage> : null}
+      <div className={errorMessage ? 'mt-4' : ''}>
+        <AuthButton href={APP_DEEP_LINK}>Back to app</AuthButton>
+      </div>
     </AuthShell>
   );
 }

@@ -8,7 +8,7 @@ import {
   AuthMessage,
   AuthShell,
 } from '@/components/AuthShell';
-import { APP_DEEP_LINK } from '@/lib/auth';
+import { APP_DEEP_LINK, establishSessionFromUrl } from '@/lib/auth';
 import { getSupabase } from '@/lib/supabase';
 
 const MIN_PASSWORD_LENGTH = 8;
@@ -26,11 +26,19 @@ export function UpdatePasswordClient() {
     async function checkSession() {
       try {
         const supabase = getSupabase();
-        const { data, error } = await supabase.auth.getSession();
+        const { session } = await establishSessionFromUrl(supabase);
 
         if (!active) return;
 
-        if (data.session && !error) {
+        if (session) {
+          setStatus('ready');
+          return;
+        }
+
+        const { data } = await supabase.auth.getSession();
+        if (!active) return;
+
+        if (data.session) {
           setStatus('ready');
           return;
         }
