@@ -11,7 +11,7 @@ import {
 import { APP_DEEP_LINK, establishSessionFromUrl } from '@/lib/auth';
 import { getSupabase } from '@/lib/supabase';
 
-const MIN_PASSWORD_LENGTH = 8;
+const MIN_PASSWORD_LENGTH = 6;
 
 export function UpdatePasswordClient() {
   const [status, setStatus] = useState('loading');
