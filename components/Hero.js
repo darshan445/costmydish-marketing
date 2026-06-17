@@ -56,6 +56,9 @@ export function Hero() {
                 </div>
               ))}
             </div>
+            <p className="mt-3 text-center text-xs leading-relaxed text-text-secondary">
+              Live example: Margherita pizza — 4 ingredients, real numbers, instant results.
+            </p>
           </div>
         </div>
       </div>
