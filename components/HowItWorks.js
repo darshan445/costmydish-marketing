@@ -12,7 +12,7 @@ const STEPS = [
   {
     step: '03',
     title: 'Add selling formats',
-    description: 'Define how you sell — 8 slices at $3.99 each, or a whole pizza at $14.99. The app costs per unit and shows profit and food cost % for each format.',
+    description: 'Define how you sell — 8 slices at $3.99 each, or a whole pizza at $14.99, or a food truck combo at $12.99. The app costs per unit and shows profit and food cost % for each format.',
   },
   {
     step: '04',
