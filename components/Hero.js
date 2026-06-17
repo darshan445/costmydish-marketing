@@ -11,12 +11,11 @@ export function Hero() {
           <p className="mb-4 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
             Food costing for real kitchens
           </p>
-          <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-text sm:text-5xl lg:text-[3.25rem]">
-            Know exactly what every dish costs.
-            <span className="block text-primary">Price with confidence.</span>
+          <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-text sm:text-4xl lg:text-[2.5rem]">
+            The free food cost calculator for chefs, bakers and food businesses
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-text-secondary">
-            CostMyDish helps you build an ingredient library, cost out recipes in real time, and set selling prices that hit your food cost targets — slice, whole pizza, or any format you sell.
+            Free food costing calculator for chefs, home bakers, caterers and food trucks. Build your ingredient library, cost recipes in real time, and set selling prices that hit your food cost % target.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a

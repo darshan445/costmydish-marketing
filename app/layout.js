@@ -11,21 +11,33 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: 'CostMyDish — Recipe costing & food cost calculator',
+  title: 'CostMyDish – Free Food Cost Calculator App for Chefs, Bakers & Restaurants',
   description:
-    'Know exactly what every dish costs. Build an ingredient library, cost recipes in real time, and set selling prices with confidence.',
+    'Free food costing calculator for chefs, home bakers, caterers and food trucks. Build your ingredient library, cost recipes in real time, and set selling prices that hit your food cost % target.',
   icons: {
     icon: '/logo.png',
     apple: '/logo.png',
   },
   openGraph: {
-    title: 'CostMyDish',
-    description: 'Recipe costing made simple. Price with confidence.',
-    images: ['/og-banner.png'],
+    title: 'CostMyDish – Free Food Cost Calculator',
+    description:
+      'Know exactly what every dish costs. Build ingredient libraries, cost recipes in real time, and price every format you sell.',
+    url: 'https://www.costmydish.com',
+    images: [
+      {
+        url: 'https://www.costmydish.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'CostMyDish – Free Food Cost Calculator',
+      },
+    ],
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/og-banner.png'],
+    title: 'CostMyDish – Free Food Cost Calculator',
+    description: 'Know your food cost % before you price a single dish.',
+    images: ['https://www.costmydish.com/og-image.png'],
   },
 };
 
@@ -35,13 +47,13 @@ const jsonLd = {
   name: 'CostMyDish',
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Android, iOS',
+  url: 'https://www.costmydish.com',
   offers: {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'USD',
   },
-  description:
-    'Food cost calculator for home bakers, cottage food operators and small restaurant owners',
+  description: 'Food cost calculator for chefs, bakers and food businesses',
 };
 
 export default function RootLayout({ children }) {
@@ -53,7 +65,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
         <Header />
         <main>{children}</main>
         <Footer />
