@@ -1,4 +1,5 @@
 import { CtaSection } from '@/components/CtaSection';
+import { Faq } from '@/components/Faq';
 import { Features } from '@/components/Features';
 import { Hero } from '@/components/Hero';
 import { HowItWorks } from '@/components/HowItWorks';
@@ -10,6 +11,7 @@ export default function HomePage() {
       <Hero />
       <Features />
       <HowItWorks />
+      <Faq />
       <Pricing />
       <CtaSection />
     </>

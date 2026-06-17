@@ -26,6 +26,7 @@ const FEATURES = [
   },
   {
     title: 'Price history',
+    badge: 'Hobbyist',
     description: 'Hobbyist subscribers get automatic price change tracking — see how ingredient costs affect your margins over time.',
     icon: '📈',
   },
@@ -52,7 +53,14 @@ export function Features() {
               className="rounded-2xl border border-border bg-surface p-6 transition hover:border-primary/20 hover:shadow-md"
             >
               <span className="text-3xl" role="img" aria-hidden>{feature.icon}</span>
-              <h3 className="mt-4 text-lg font-bold text-text">{feature.title}</h3>
+              <h3 className="mt-4 flex flex-wrap items-center gap-2 text-lg font-bold text-text">
+                {feature.title}
+                {feature.badge ? (
+                  <span className="rounded-full bg-accent/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-700">
+                    {feature.badge}
+                  </span>
+                ) : null}
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">{feature.description}</p>
             </article>
           ))}

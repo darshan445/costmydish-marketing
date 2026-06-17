@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { MARKETING_FAQ, SUPPORT_FAQ } from '@/lib/faqs';
 import { siteConfig } from '@/lib/site';
 
 export const metadata = {
@@ -6,25 +7,7 @@ export const metadata = {
   description: 'Get help with CostMyDish. Contact our support team or reach out about privacy requests.',
 };
 
-const FAQ = [
-  {
-    q: 'How do I reset my password?',
-    a: 'On the login screen, use the password reset option. A reset link will be sent to your registered email.',
-  },
-  {
-    q: 'How do I cancel my Hobbyist subscription?',
-    a: 'Subscriptions are managed through the App Store (iOS) or Google Play (Android). Open your store account → Subscriptions → CostMyDish → Cancel.',
-  },
-  {
-    q: 'Will changing currency convert my recipe prices?',
-    a: 'No. Changing currency in Settings updates display symbols only. You will need to update ingredient and selling prices manually.',
-  },
-  {
-    q: 'How do I delete my account?',
-    a: 'Go to Settings → Delete Account in the app. This permanently removes your recipes, ingredients, and profile data.',
-  },
-];
-
+const FAQ = [...MARKETING_FAQ, ...SUPPORT_FAQ];
 export default function ContactPage() {
   const { supportEmail, privacyEmail } = siteConfig;
 
