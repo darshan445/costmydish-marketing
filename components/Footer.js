@@ -12,7 +12,7 @@ export function Footer() {
               <span className="text-lg font-bold">CostMyDish</span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-              Recipe costing made simple for home cooks, cafés, and small kitchens. Know your food cost. Price with confidence.
+              Free food cost calculator for chefs, home bakers, caterers and food truck owners. Know your food cost %. Price with confidence.
             </p>
           </div>
 
