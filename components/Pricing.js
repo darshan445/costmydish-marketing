@@ -46,14 +46,14 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-4xl items-center gap-6 md:grid-cols-2">
           {PLANS.map((plan) => (
             <article
               key={plan.name}
-              className={`rounded-2xl border p-8 ${
+              className={`rounded-2xl border ${
                 plan.highlighted
-                  ? 'border-primary bg-surface shadow-lg ring-2 ring-primary/20'
-                  : 'border-border bg-surface'
+                  ? 'border-2 border-primary bg-primary/5 p-9 shadow-lg md:p-10'
+                  : 'border-border bg-surface p-8'
               }`}
             >
               {plan.highlighted && (
