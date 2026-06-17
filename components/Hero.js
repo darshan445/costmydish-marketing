@@ -8,9 +8,6 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <div>
-          <p className="mb-4 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-            Food costing for real kitchens
-          </p>
           <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-text sm:text-4xl lg:text-[2.5rem]">
             The free food cost calculator for chefs, bakers and food businesses
           </h1>
