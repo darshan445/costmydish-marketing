@@ -41,7 +41,7 @@ export function Features() {
             Everything you need to cost a menu
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
-            Built for people who cook for others — not spreadsheets. Simple enough for a home baker, powerful enough for a small café.
+            Built for restaurant owners, home bakers, caterers and food trucks — not spreadsheets. The food cost calculator that works for any format you sell.
           </p>
         </div>
 
