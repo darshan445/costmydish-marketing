@@ -21,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: 'CostMyDish – Free Food Cost Calculator',
     description:
-      'Know exactly what every dish costs. Build ingredient libraries, cost recipes in real time, and price every format you sell.',
+      'Know your food cost percentage before you price a single dish. CostMyDish is a free food costing calculator for restaurant owners, home bakers, caterers and food truck operators.',
     url: 'https://www.costmydish.com',
     images: [
       {
