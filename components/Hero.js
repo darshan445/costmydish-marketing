@@ -8,8 +8,12 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <div>
-          <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-text sm:text-4xl lg:text-[2.5rem]">
+          <p className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-primary">
             The free food cost calculator for chefs, bakers and food businesses
+          </p>
+          <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-text sm:text-4xl lg:text-[2.5rem]">
+            CostMyDish – Free Food Cost Calculator App
+            <span className="block text-primary">for Chefs, Bakers &amp; Restaurants</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-text-secondary">
             Free food costing calculator for chefs, home bakers, caterers and food trucks. Build your ingredient library, cost recipes in real time, and set selling prices that hit your food cost % target.
