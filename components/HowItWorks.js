@@ -2,7 +2,7 @@ const STEPS = [
   {
     step: '01',
     title: 'Add your ingredients',
-    description: 'Enter what you buy and what you paid — e.g. flour at $3.99 per 80 oz, milk at ₹50 per litre. Optional waste % for trim and spoilage.',
+    description: 'Enter what you buy and what you paid — e.g. flour at $3.99 per 2kg, milk at ₹50 per litre. Optional waste % for trim and spoilage. Works in any currency and any unit.',
   },
   {
     step: '02',
