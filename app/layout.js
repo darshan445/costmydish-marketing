@@ -14,6 +14,13 @@ export const metadata = {
   title: 'CostMyDish – Free Food Cost Calculator App for Chefs, Bakers & Restaurants',
   description:
     'Free food costing calculator for chefs, home bakers, caterers and food trucks. Build your ingredient library, cost recipes in real time, and set selling prices that hit your food cost % target.',
+  alternates: {
+    canonical: 'https://www.costmydish.com',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: '/logo.png',
     apple: '/logo.png',
