@@ -17,35 +17,39 @@ export default function ContactPage() {
         <p className="text-sm font-bold uppercase tracking-wider text-primary">Support</p>
         <h1 className="mt-2 text-3xl font-extrabold text-text sm:text-4xl">Contact & Support</h1>
         <p className="mt-4 text-lg text-text-secondary">
-          We&apos;re here to help with account issues, billing questions, and general feedback about CostMyDish.
+          We&apos;re here to help — reach out any time.
         </p>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          <article className="rounded-2xl border border-border bg-surface p-6">
-            <h2 className="text-lg font-bold text-text">General support</h2>
-            <p className="mt-2 text-sm text-text-secondary">
-              App bugs, login problems, subscriptions, feature questions, and account help.
+        <div className="mt-10 space-y-4">
+          <article className="rounded-2xl border border-border border-l-4 border-l-primary bg-surface p-8 shadow-md">
+            <h2 className="text-xl font-bold text-text">General support</h2>
+            <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+              For all questions — app bugs, login problems, billing, subscriptions, feature requests, and privacy requests. This is your main line to our team.
             </p>
             <a
               href={`mailto:${supportEmail}`}
-              className="mt-4 inline-block text-sm font-semibold text-primary underline hover:text-primary-dark"
+              className="mt-5 inline-block text-sm font-semibold text-primary underline hover:text-primary-dark"
             >
               {supportEmail}
             </a>
           </article>
 
-          <article className="rounded-2xl border border-border bg-surface p-6">
-            <h2 className="text-lg font-bold text-text">Privacy requests</h2>
-            <p className="mt-2 text-sm text-text-secondary">
-              Data access, correction, deletion, or other privacy-related enquiries.
+          <article className="rounded-2xl border border-border bg-surface-alt p-5">
+            <h2 className="text-base font-semibold text-text-secondary">Formal privacy requests only</h2>
+            <p className="mt-2 text-sm leading-relaxed text-text-secondary/90">
+              For formal data access, correction, or deletion requests under GDPR or applicable privacy law.
             </p>
             <a
               href={`mailto:${privacyEmail}`}
-              className="mt-4 inline-block text-sm font-semibold text-primary underline hover:text-primary-dark"
+              className="mt-4 inline-block text-sm font-medium text-text-secondary underline hover:text-primary"
             >
               {privacyEmail}
             </a>
           </article>
+
+          <p className="text-xs leading-relaxed text-text-secondary">
+            For general questions, {supportEmail} handles everything including privacy queries.
+          </p>
         </div>
 
         <div className="mt-10 rounded-2xl bg-surface-alt p-6">
