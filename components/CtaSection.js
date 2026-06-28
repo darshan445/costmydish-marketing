@@ -1,3 +1,5 @@
+import { siteConfig } from '@/lib/site';
+
 export function CtaSection() {
   return (
     <section id="download" className="px-4 py-20 sm:px-6">
@@ -7,15 +9,20 @@ export function CtaSection() {
           Download CostMyDish on iOS or Android. Create your account, add ingredients, and see your first recipe cost breakdown in minutes.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a
+            href={siteConfig.appStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-white px-6 py-3 text-sm font-bold text-primary shadow-md transition hover:bg-white/90"
+          >
+            Download on the App Store
+          </a>
           <span className="rounded-full bg-white/15 px-6 py-3 text-sm font-semibold backdrop-blur">
-            📱 iOS — App Store (coming soon)
-          </span>
-          <span className="rounded-full bg-white/15 px-6 py-3 text-sm font-semibold backdrop-blur">
-            🤖 Android — Google Play (coming soon)
+            Android — Google Play (coming soon)
           </span>
         </div>
         <p className="mt-6 text-xs text-white/70">
-          Store links will be added when the app is published.
+          Android store link will be added when the app is published on Google Play.
         </p>
       </div>
     </section>
