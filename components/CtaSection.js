@@ -17,13 +17,15 @@ export function CtaSection() {
           >
             Download on the App Store
           </a>
-          <span className="rounded-full bg-white/15 px-6 py-3 text-sm font-semibold backdrop-blur">
-            Android — Google Play (coming soon)
-          </span>
+          <a
+            href={siteConfig.playStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-white px-6 py-3 text-sm font-bold text-primary shadow-md transition hover:bg-white/90"
+          >
+            Get it on Google Play
+          </a>
         </div>
-        <p className="mt-6 text-xs text-white/70">
-          Android store link will be added when the app is published on Google Play.
-        </p>
       </div>
     </section>
   );
