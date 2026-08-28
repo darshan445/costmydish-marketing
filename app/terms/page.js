@@ -1,9 +1,11 @@
 import { siteConfig } from '@/lib/site';
+import { buildPageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: 'Terms & Conditions — CostMyDish',
   description: 'Terms and conditions for using the CostMyDish mobile application and services.',
-};
+  pathname: '/terms',
+});
 
 export default function TermsPage() {
   const { supportEmail } = siteConfig;

@@ -1,10 +1,15 @@
 import Link from 'next/link';
 import { siteConfig } from '@/lib/site';
+import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = {
-  title: 'Delete Your Account — CostMyDish',
-  description:
-    'How to permanently delete your CostMyDish account, recipes, ingredients, and personal data.',
+  ...buildPageMetadata({
+    title: 'Delete Your Account — CostMyDish',
+    description:
+      'How to permanently delete your CostMyDish account, recipes, ingredients, and personal data.',
+    pathname: '/delete-account',
+  }),
+  robots: { index: false, follow: false },
 };
 
 const DELETED_ITEMS = [

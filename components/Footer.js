@@ -16,13 +16,23 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="flex gap-16">
+          <div className="flex flex-wrap gap-16 md:gap-12">
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-text-secondary">Product</p>
               <ul className="mt-3 space-y-2 text-sm">
                 <li><a href="/#features" className="text-text-secondary hover:text-primary">Features</a></li>
                 <li><a href="/#how-it-works" className="text-text-secondary hover:text-primary">How it works</a></li>
                 <li><a href="/#pricing" className="text-text-secondary hover:text-primary">Pricing</a></li>
+                <li><a href="/compare" className="text-text-secondary hover:text-primary">Compare</a></li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-text-secondary">Guides</p>
+              <ul className="mt-3 space-y-2 text-sm">
+                <li><a href="/food-cost-calculator" className="text-text-secondary hover:text-primary">Food cost calculator</a></li>
+                <li><a href="/recipe-cost-calculator" className="text-text-secondary hover:text-primary">Recipe cost calculator</a></li>
+                <li><a href="/bakery-pricing-calculator" className="text-text-secondary hover:text-primary">Bakery pricing</a></li>
+                <li><a href="/restaurant-menu-costing" className="text-text-secondary hover:text-primary">Restaurant menu costing</a></li>
               </ul>
             </div>
             <div>

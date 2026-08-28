@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import { MARKETING_FAQ, SUPPORT_FAQ } from '@/lib/faqs';
+import { buildPageMetadata } from '@/lib/seo';
 import { siteConfig } from '@/lib/site';
 
-export const metadata = {
-  title: 'Contact & Support — CostMyDish',
-  description: 'Get help with CostMyDish. Contact our support team or reach out about privacy requests.',
-};
+export const metadata = buildPageMetadata({
+  title: 'Contact & Support — CostMyDish Food Cost Calculator',
+  description: 'Get help with CostMyDish. Contact support for app bugs, billing, subscriptions, and privacy requests.',
+  pathname: '/contact',
+});
 
 const FAQ = [...MARKETING_FAQ, ...SUPPORT_FAQ];
 export default function ContactPage() {

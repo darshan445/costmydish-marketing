@@ -1,9 +1,11 @@
 import { siteConfig } from '@/lib/site';
+import { buildPageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: 'Privacy Policy — CostMyDish',
   description: 'How CostMyDish collects, uses, and protects your personal information.',
-};
+  pathname: '/privacy',
+});
 
 export default function PrivacyPage() {
   const { privacyEmail } = siteConfig;
